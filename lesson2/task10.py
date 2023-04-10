@@ -6,7 +6,7 @@ n = int(input("Введите количество монет: "))
 zero = 0
 one = 0
 for i in range(n):
-    x = int(input("Введите орел(1) или решка(0)? "))
+    x = int(input("Введите орел(1) или решка(0): "))
     if x == 0:
         zero += 1
     else:
