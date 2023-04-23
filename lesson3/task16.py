@@ -7,14 +7,9 @@
 #    3
 #    -> 1
 
-# N = int(input('Введите количество элементов в массиве: '))
-# A = list(range(N))
-# A.append(N)  # добавить значение, которое равно N
-# A.remove(0)  # удалить значение 0 в массиве
-# print(*A)
 from random import randrange
 N = 10
-A = [randrange(30) for i in range(N)]
+A = [randrange(1, 20) for i in range(N)]
 print(*A)
 X = int(input('Введите число, которое необходимо найти в массиве: '))
 num=0
