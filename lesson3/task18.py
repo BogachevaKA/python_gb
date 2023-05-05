@@ -9,5 +9,21 @@
 
 from random import randrange
 N = 10
-A = [randrange(1, 20) for i in range(N)]
+A = [randrange(1, 20) for _ in range(int(input('Введите количество элементов в массиве: ')))]
 print(*A)
+
+X = int(input('Введите значение для поиска близкого по величине элемента: '))
+A.append(X)
+ints_list = list(set(A))
+new_list1=ints_list[:ints_list.index(X)]
+new_list2=ints_list[ints_list.index(X):]
+
+if len(new_list1)>1 and len(new_list2)>1:
+    print(f'Минимально близкий элемент от заданного значения: {new_list1[-1]}')
+    print(f'Максимально близкий элемент от заданного значения: {new_list2[+1]}')
+if ints_list.index(X)==0 and len(new_list2)>1:
+    print('Минимально близкий элемент отсутствует')
+    print(f'Максимально близкий элемент от заданного значения: {new_list2[+1]}')
+if len(new_list1)>1 and len(new_list2)==1:
+    print(f'Минимально близкий элемент от заданного значения: {new_list1[-1]}')
+    print('Максимально близкий элемент отсутствует')
